@@ -5,39 +5,39 @@
     section: System Access
     key: PasswordHistorySize
     value: 24
-  when: arg1 == "enabled"
+  when: "'-1.1.1-' in flag" 
 
 - name: 1.1.2-Maximum password age between 60d-1d
   community.windows.win_security_policy:
     section: System Access
     key: MaximumPasswordAge
     value: 60
-  when: arg1 == "enabled"
+  when: "'-1.1.2-' in flag"
 
 - name: 1.1.3-Minimum password age +1d
   community.windows.win_security_policy:
     section: System Access
     key: MinimumPasswordAge
     value: 1
-  when: arg1 == "enabled"
+  when: "'-1.1.3-' in flag"
 
 - name: 1.1.4-Minimum password length is +14 characters
   community.windows.win_security_policy:
     section: System Access
     key: MinimumPasswordLength
     value: 14
-  when: arg1 == "enabled"
+  when: "'-1.1.4-' in flag"
 
 - name: 1.1.5-Password complexity enabled
   community.windows.win_security_policy:
     section: System Access
     key: PasswordComplexity
     value: 1
-  when: arg1 == "enabled"
+  when: "'-1.1.5-' in flag"
 
 - name: 1.1.6-Store password using reversible encryption disabled
   community.windows.win_security_policy:
     section: System Access
     key: ClearTextPassword
     value: 0
-  when: arg1 == "enabled"
+  when: "'-1.1.6-' in flag"
